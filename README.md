@@ -1,32 +1,67 @@
-# Mobile Web Specialist Certification Course
+# Project. Restaurant App: Stage 1
+
 ---
-#### _Three Stage Course Material Project - Restaurant Reviews_
+#Udacity Front-end Development Nano-degree
 
-## Project Overview: Stage 1
+#Google Scholarship
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+## Table of Contents
 
-### Specification
+* [1. Introduction](#introduction)
+* [2. Restaurant Reviews project and its objective](#objectives)
+* [3. Arcade Game Clone: how to run it?](#howtorun)
+* [4. Contributing](#contributing)
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+---
 
-### What do I do from here?
+## 1. Introduction: Restaurant Reviews
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+The **Restaurant Reviews** is an app that allows to check the near-by restaurants and read opinions about them. The user can check where is the restaurant, what time it is open and check how other visitors rated it. The user can see the locations of the restaurants directly on the map. Thanks to it, he can check the near-by restaurants and choose the best one for him!
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
+## 2. Restaurant Reviews project and its objective
+The main objective of the **Restaurant Reviews** projects was to incrementally convert a static webpage (the basic scripts were delivered) to a mobile-ready web application. In **Stage One**, it was requested to take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use (smartphones, tablets, etc.). Also, it was needed to a service worker to begin the process of creating a seamless offline experience for users.
 
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+## 3. How to run the app?
+To run the app, you need to start up a simple HTTP to serve up the site files on your local computer.Python has some simple tools to do this. In a terminal, check the version of Python you have: `python -V`. If you don´t have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software. Then, follow below steps:
+1. Fork and clone the this repository.
+2. Open a terminal and from from inside the new directory, launch a local client server using Python from your terminal:
+* `Python 2: python -m SimpleHTTPServer 8000`
+* `Python 3: python3 -m http.server 8000`
+3. Open the browser and check the site at http://localhost:8000
 
-## Leaflet.js and Mapbox:
+Great! Your app should run!
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
+## 4. What objectives have been achieved?
+Within the project objectives, we can list following challenges:
+* Make the side fully responsive
+* Make the site accessible
+* Cache the static site for offline use
 
-### Note about ES6
+Below description how those goals have been achieved
 
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
+###4.1. Responsive design
+The viewport has been implemented for `index.html` and for `restaurant.html`. Also, the breakpoints have been determined depend on the device resolution. Thanks to it, the images do not overlap, and page elements do not wrap when the viewport is too small to display them side by side. Moreover, the `Grunt` plugin has been used to optimize the image assets used in  app project.
 
+###4.2. Accessibility
+The next challenge was to achieve a high accessibility between 90% and 100%. In order to it, the script has been improved to add the `alt` to all images that did not have it. Also, other design aspects have been improved, like a contract of colours, descriptions, semantic markups, etc.
 
+###4.3. Offline access
+The project objective was to make a website accessible offline. Using Cache API and a ServiceWorker, cache the data for the website so that any page (including images) that has been visited is accessible offline. In this case, very helpful was Google Dev article (videm: https://developers.google.com/web/fundamentals/codelabs/offline/) that explains very well how to register Service Worker, how include it in the scripts, how to create a cache store and - how to test it.
 
+## 5. What is required to run the app?
+To run the app, several setups and installation are required:
+
+1. Mapbox
+You will need a MapBox API key. Replace the text <your MAPBOX API KEY HERE>inside of main.js with your key. MapBox API is free to use, without providing any payment information. You can register [here](www.mapbox.com).
+
+2. Grunt
+For optimizing images, we use Grunt. You can set it up using following instruction: [Getting started with Grunt](https://gruntjs.com/getting-started). Also, you need to have installed:
+* [gulp-jimp-resize](https://www.npmjs.com/package/gulp-jimp-resize)
+* [gulp-image](https://www.npmjs.com/package/gulp-image)
+* [bluebird](https://www.npmjs.com/package/bluebird)
+
+##6. Contributing
+
+This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+
+For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
