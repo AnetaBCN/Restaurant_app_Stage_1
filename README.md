@@ -1,9 +1,9 @@
 # Project. Restaurant App: Stage 1
 
 ---
-## Udacity Front-end Development Nano-degree
+### Udacity Front-end Development Nano-degree
 
-## Google Scholarship
+### Google Scholarship
 
 ## Table of Contents
 
