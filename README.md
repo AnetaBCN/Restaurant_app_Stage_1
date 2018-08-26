@@ -1,9 +1,9 @@
 # Project. Restaurant App: Stage 1
 
 ---
-#Udacity Front-end Development Nano-degree
+## Udacity Front-end Development Nano-degree
 
-#Google Scholarship
+## Google Scholarship
 
 ## Table of Contents
 
@@ -29,7 +29,7 @@ To run the app, you need to start up a simple HTTP to serve up the site files on
 2. Open a terminal and from from inside the new directory, launch a local client server using Python from your terminal:
 * `Python 2: python -m SimpleHTTPServer 8000`
 * `Python 3: python3 -m http.server 8000`
-3. Open the browser and check the site at http://localhost:8000
+3. Open the browser and check the site at `http://localhost:8000`.
 
 Great! Your app should run!
 
@@ -53,10 +53,10 @@ The project objective was to make a website accessible offline. Using Cache API 
 ## 5. What is required to run the app?
 To run the app, several setups and installation are required:
 
-1. Mapbox
+#### 1. Mapbox
 You will need a MapBox API key. Replace the text <your MAPBOX API KEY HERE>inside of main.js with your key. MapBox API is free to use, without providing any payment information. You can register [here](www.mapbox.com).
 
-2. Grunt
+##### 2. Grunt
 For optimizing images, we use Grunt. You can set it up using following instruction: [Getting started with Grunt](https://gruntjs.com/getting-started). Also, you need to have installed:
 * [gulp-jimp-resize](https://www.npmjs.com/package/gulp-jimp-resize)
 * [gulp-image](https://www.npmjs.com/package/gulp-image)
